@@ -60,21 +60,21 @@ A API utiliza autenticação básica. Para autenticar, envie suas credenciais (n
 **Endpoints**
 Usuários
 Listar usuários
-
 GET /api/v1/usuarios/
+
 Criar um novo usuário
-
 POST /api/v1/usuarios/
+
 Obter detalhes de um usuário
-
 GET /api/v1/usuarios/{id}/
+
 Atualizar um usuário
-
 PUT /api/v1/usuarios/{id}/
-Deletar um usuário
 
+Deletar um usuário
 DELETE /api/v1/usuarios/{id}/
-Contribuição
+
+###Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para enviar um pull request ou abrir uma issue para sugestões de melhorias.
 
 Licença
