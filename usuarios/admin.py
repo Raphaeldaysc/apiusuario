@@ -8,4 +8,4 @@ class UsuarioAdmin(admin.ModelAdmin):
     list_filter = ['created_at', 'updated_at', 'active']
     date_hierarchy = 'created_at'
     ordering = ['created_at']
-    fields = ['username', 'email', 'bio', 'profile_picture', 'birth_date', 'phone', 'address', 'city', 'state',]
+    fields = ['username', 'password', 'email', 'bio', 'profile_picture', 'birth_date', 'phone', 'address', 'city', 'state',]

@@ -1,10 +1,12 @@
 from rest_framework import viewsets
-from .models import Usuario  # Ajuste esta importação conforme o nome da sua classe de modelo
+from rest_framework.permissions import IsAuthenticated
+from .models import Usuario
 from .serializers import UsuarioSerializer
 
 class UsuarioViewSet(viewsets.ModelViewSet):
-    queryset = Usuario.objects.all()  # Queryset para recuperar todas as instâncias de usuário
-    serializer_class = UsuarioSerializer  # Especifica a classe serializer para serialização/deserialização
+    queryset = Usuario.objects.all()
+    serializer_class = UsuarioSerializer
+    permission_classes = [IsAuthenticated]  # Apenas usuários autenticados podem acessar
 
     def perform_create(self, serializer):
         # Comportamento personalizado para criar um usuário (se necessário)
