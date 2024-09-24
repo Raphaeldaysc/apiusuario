@@ -1,28 +1,32 @@
-API de Gestão de Usuários
-Bem-vindo à API de Gestão de Usuários! Esta API foi desenvolvida para facilitar a manipulação e o gerenciamento de dados de usuários, utilizando Django e Django REST Framework.
+# API de Gestão de Usuários
 
-Índice
-Recursos
-Instalação
-Uso
-Autenticação
-Endpoints
-Contribuição
-Licença
-Recursos
-CRUD completo para usuários (Criar, Ler, Atualizar, Deletar)
-Autenticação básica
-Validação de e-mails únicos
-Campos personalizáveis para cada usuário, como biografia, foto de perfil, data de nascimento, telefone e endereço
-Instalação
+Bem-vindo à **API de Gestão de Usuários**! Esta API foi desenvolvida para facilitar a manipulação e o gerenciamento de dados de usuários, utilizando Django e Django REST Framework.
+
+## Índice
+
+- [Recursos](#recursos)
+- [Instalação](#instalação)
+- [Uso](#uso)
+- [Autenticação](#autenticação)
+- [Endpoints](#endpoints)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
+
+## Recursos
+
+- CRUD completo para usuários (Criar, Ler, Atualizar, Deletar)
+- Autenticação básica
+- Validação de e-mails únicos
+- Campos personalizáveis para cada usuário, como biografia, foto de perfil, data de nascimento, telefone e endereço
+
+## Instalação
+
 Para configurar a API em sua máquina local, siga os passos abaixo:
 
-Clone o repositório:
-
-bash
-Copiar código
-git clone https://github.com/seuusuario/sua-api.git
-cd sua-api
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seuusuario/sua-api.git
+   cd sua-api
 Crie um ambiente virtual e ative-o:
 
 bash
