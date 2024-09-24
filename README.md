@@ -30,30 +30,25 @@ Para configurar a API em sua máquina local, siga os passos abaixo:
 Crie um ambiente virtual e ative-o:
 
 bash
-Copiar código
 python -m venv venv
 source venv/bin/activate  # No Windows, use `venv\Scripts\activate`
 Instale as dependências:
 
 bash
-Copiar código
 pip install -r requirements.txt
 Configure seu banco de dados no arquivo settings.py.
 
 Aplique as migrações:
 
 bash
-Copiar código
 python manage.py migrate
 Crie um superusuário (opcional):
 
 bash
-Copiar código
 python manage.py createsuperuser
 Inicie o servidor:
 
 bash
-Copiar código
 python manage.py runserver
 Uso
 Para acessar a API, faça requisições HTTP para os endpoints listados abaixo. A API suporta autenticação básica, portanto, você precisará fornecer um nome de usuário e uma senha válidos.
@@ -63,7 +58,6 @@ A API utiliza autenticação básica. Para autenticar, envie suas credenciais (n
 
 Exemplo de Requisição
 bash
-Copiar código
 curl -X GET http://127.0.0.1:8000/api/v1/usuarios/ \
      -H "Authorization: Basic $(echo -n 'username:password' | base64)"
 Endpoints
