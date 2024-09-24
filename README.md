@@ -27,55 +27,77 @@ Para configurar a API em sua máquina local, siga os passos abaixo:
    ```bash
    git clone https://github.com/Raphaeldaysc/apiusuario.git
    cd apiusuario
+   ```
 2. **Crie um ambiente virtual e ative-o:**
    ```bash
    python -m venv venv
    source venv/bin/activate  # No Windows, use `venv\Scripts\activate`
+   ```
 3. **Instale as dependências:**
-
    ```bash
    pip install -r requirements.txt
+   ```
 4. **Configure seu banco de dados no arquivo settings.py.**
-
 5. **Aplique as migrações:**
-
    ```bash
    python manage.py migrate
+   ```
 6. **Crie um superusuário (opcional):**
-
    ```bash
    python manage.py createsuperuser
+   ```
 7. **Inicie o servidor:**
    ```bash
    python manage.py runserver
-**Uso**
+   ```
+
+## Uso
+
 Para acessar a API, faça requisições HTTP para os endpoints listados abaixo. A API suporta autenticação básica, portanto, você precisará fornecer um nome de usuário e uma senha válidos.
 
-Autenticação
+## Autenticação
+
 A API utiliza autenticação básica. Para autenticar, envie suas credenciais (nome de usuário e senha) em cada requisição.
 
 **Exemplo de Requisição**
-   curl -X GET http://127.0.0.1:8000/api/v1/usuarios/ \
-        -H "Authorization: Basic $(echo -n 'username:password' | base64)"
-**Endpoints**
-Usuários
-Listar usuários
-GET /api/v1/usuarios/
+```bash
+curl -X GET http://127.0.0.1:8000/api/v1/usuarios/ \
+     -H "Authorization: Basic $(echo -n 'username:password' | base64)"
+```
 
-Criar um novo usuário
-POST /api/v1/usuarios/
+## Endpoints
 
-Obter detalhes de um usuário
-GET /api/v1/usuarios/{id}/
+### Usuários
 
-Atualizar um usuário
-PUT /api/v1/usuarios/{id}/
+- **Listar usuários**
+  ```http
+  GET /api/v1/usuarios/
+  ```
 
-Deletar um usuário
-DELETE /api/v1/usuarios/{id}/
+- **Criar um novo usuário**
+  ```http
+  POST /api/v1/usuarios/
+  ```
 
-###Contribuição
+- **Obter detalhes de um usuário**
+  ```http
+  GET /api/v1/usuarios/{id}/
+  ```
+
+- **Atualizar um usuário**
+  ```http
+  PUT /api/v1/usuarios/{id}/
+  ```
+
+- **Deletar um usuário**
+  ```http
+  DELETE /api/v1/usuarios/{id}/
+  ```
+
+## Contribuição
+
 Contribuições são bem-vindas! Sinta-se à vontade para enviar um pull request ou abrir uma issue para sugestões de melhorias.
 
-Licença
+## Licença
+
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
