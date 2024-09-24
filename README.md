@@ -25,7 +25,7 @@ Para configurar a API em sua máquina local, siga os passos abaixo:
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/seuusuario/apiusuario.git
+   git clone https://github.com/Raphaeldaysc/apiusuario.git
    cd apiusuario
 2. **Crie um ambiente virtual e ative-o:**
    ```bash
