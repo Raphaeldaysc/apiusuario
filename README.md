@@ -29,32 +29,28 @@ Para configurar a API em sua máquina local, siga os passos abaixo:
    cd apiusuario
 Crie um ambiente virtual e ative-o:
 
-bash
-Copiar código
-python -m venv venv
-source venv/bin/activate  # No Windows, use `venv\Scripts\activate`
-Instale as dependências:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # No Windows, use `venv\Scripts\activate`
+   Instale as dependências:
 
-bash
-Copiar código
-pip install -r requirements.txt
-Configure seu banco de dados no arquivo settings.py.
-
+   ```bash
+   pip install -r requirements.txt
+   Configure seu banco de dados no arquivo settings.py.
 Aplique as migrações:
 
-bash
-Copiar código
-python manage.py migrate
-Crie um superusuário (opcional):
+   ```bash
+   python manage.py migrate
+   Crie um superusuário (opcional):
 
-bash
-Copiar código
+```bash
+
 python manage.py createsuperuser
 Inicie o servidor:
 
-bash
-Copiar código
+```bash
 python manage.py runserver
+
 Uso
 Para acessar a API, faça requisições HTTP para os endpoints listados abaixo. A API suporta autenticação básica, portanto, você precisará fornecer um nome de usuário e uma senha válidos.
 
@@ -69,20 +65,20 @@ curl -X GET http://127.0.0.1:8000/api/v1/usuarios/ \
 Endpoints
 Usuários
 Listar usuários
-
 GET /api/v1/usuarios/
+
 Criar um novo usuário
-
 POST /api/v1/usuarios/
+
 Obter detalhes de um usuário
-
 GET /api/v1/usuarios/{id}/
+
 Atualizar um usuário
-
 PUT /api/v1/usuarios/{id}/
-Deletar um usuário
 
+Deletar um usuário
 DELETE /api/v1/usuarios/{id}/
+
 Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para enviar um pull request ou abrir uma issue para sugestões de melhorias.
 
