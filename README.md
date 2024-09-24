@@ -27,40 +27,37 @@ Para configurar a API em sua máquina local, siga os passos abaixo:
    ```bash
    git clone https://github.com/seuusuario/sua-api.git
    cd sua-api
-Crie um ambiente virtual e ative-o:
+2. **Crie um ambiente virtual e ative-o:**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # No Windows, use `venv\Scripts\activate`
+3. **Instale as dependências:**
 
-bash
-python -m venv venv
-source venv/bin/activate  # No Windows, use `venv\Scripts\activate`
-Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
+4. **Configure seu banco de dados no arquivo settings.py.**
 
-bash
-pip install -r requirements.txt
-Configure seu banco de dados no arquivo settings.py.
+5. **Aplique as migrações:**
 
-Aplique as migrações:
+   ```bash
+   python manage.py migrate
+6. **Crie um superusuário (opcional):**
 
-bash
-python manage.py migrate
-Crie um superusuário (opcional):
-
-bash
-python manage.py createsuperuser
-Inicie o servidor:
-
-bash
-python manage.py runserver
-Uso
+   ```bash
+   python manage.py createsuperuser
+7. **Inicie o servidor:**
+   ```bash
+   python manage.py runserver
+**Uso**
 Para acessar a API, faça requisições HTTP para os endpoints listados abaixo. A API suporta autenticação básica, portanto, você precisará fornecer um nome de usuário e uma senha válidos.
 
 Autenticação
 A API utiliza autenticação básica. Para autenticar, envie suas credenciais (nome de usuário e senha) em cada requisição.
 
-Exemplo de Requisição
-bash
-curl -X GET http://127.0.0.1:8000/api/v1/usuarios/ \
-     -H "Authorization: Basic $(echo -n 'username:password' | base64)"
-Endpoints
+**Exemplo de Requisição**
+   curl -X GET http://127.0.0.1:8000/api/v1/usuarios/ \
+        -H "Authorization: Basic $(echo -n 'username:password' | base64)"
+**Endpoints**
 Usuários
 Listar usuários
 
